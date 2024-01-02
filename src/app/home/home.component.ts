@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -9,5 +9,8 @@ import { Component } from '@angular/core';
  
 })
 export class HomeComponent {
-
+  constructor(private route:Router){}
+  Click(){
+    this.route.navigateByUrl("/admin")
+  }
 }
