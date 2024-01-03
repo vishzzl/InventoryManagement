@@ -18,6 +18,7 @@ steps:
 - script: |
     echo "Current directory: $(pwd)"
     echo "Node.js version: $(node --version)"
+    echo "ls"
     npm install -g @angular/cli
     npm install
     npm audit fix --force
