@@ -19,10 +19,10 @@ steps:
     echo "Current directory: $(pwd)"
     echo "Node.js version: $(node --version)"
     echo "$(ls)"
-    ng version
     npm install -g @angular/cli
     npm install
     npm audit fix --force
+    ng version
     ng build --prod
   displayName: 'npm install and build'
   
