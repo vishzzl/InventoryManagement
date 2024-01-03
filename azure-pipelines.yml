@@ -18,11 +18,15 @@ steps:
 - script: |
     echo "Current directory: $(pwd)"
     echo "Node.js version: $(node --version)"
+    npm cache clean --force
     npm install
-    ng version
-    ng build --configuration=production
   displayName: 'npm install and build'
   
+- script: |
+    ng version
+    ng build 
+  displayName: 'ng build'
+
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(Build.BinariesDirectory)/dist'
