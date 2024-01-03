@@ -18,12 +18,10 @@ steps:
 - script: |
     echo "Current directory: $(pwd)"
     echo "Node.js version: $(node --version)"
-    echo "$(ls)"
     npm install -g @angular/cli
     npm install
     npm audit fix --force
-    ng version
-    ng build --prod
+    ng build --configuration=production
   displayName: 'npm install and build'
   
 - task: ArchiveFiles@2
