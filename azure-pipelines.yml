@@ -16,6 +16,9 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    echo "Current directory: $(pwd)"
+    echo "Node.js version: $(node --version)"
+    npm install -g @angular/cli
     npm install
     npm audit fix --force
     ng build --prod
