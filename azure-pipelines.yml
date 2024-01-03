@@ -23,6 +23,7 @@ steps:
   displayName: 'npm install and build'
   
 - script: |
+    npm install -g @angular/cli@$(NgVersion)
     ng version
     ng build 
   displayName: 'ng build'
